@@ -8,12 +8,12 @@ namespace Models
         public string Series { get; private set; }
         public string Number { get; private set; }
         public string IssuedBy { get; private set; }
-        public DateTime IssuedOn { get; private set; }
+        public string IssuedOn { get; private set; }
         public string Registration { get; private set; }
         
         public Result ValidationResult { get; private set; }
         
-        public PassportData(string series, string number, string issuedBy, DateTime issuedOn, string registration)
+        public PassportData(string series, string number, string issuedBy, string issuedOn, string registration)
         {
             Series = series;
             Number = number;
