@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 
 namespace CreditApplication
 {
@@ -6,7 +7,9 @@ namespace CreditApplication
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("\n\t<--- Мгновенный кредит --->\n");
+            var operatorName = ConfigurationManager.AppSettings["OperatorName"];
+            Console.WriteLine($"Оператор: {operatorName}\n");
         }
     }
 }
