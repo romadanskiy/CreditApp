@@ -10,7 +10,7 @@
         public bool HasCriminalRecord { get; set; }
         public int CreditAmount { get; set; }
         public string Goal { get; set; }
-        public string Job { get; set; } // ?
+        public string Job { get; set; }
         public string Deposit { get; set; }
         public int CarAge { get; set; }
         
