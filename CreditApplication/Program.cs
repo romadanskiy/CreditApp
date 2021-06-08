@@ -14,7 +14,8 @@ namespace CreditApplication
             
             if (!isValid) return;
 
-            var calculator = new Calculator();
+            Calculator calculator = new SimpleCalculator();
+            calculator = new CalculatorWithLogging(calculator);
             var total = calculator.CalculatePoints(creditApplication);
 
             var creditIsApproved = total > 80;

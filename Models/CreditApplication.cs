@@ -26,7 +26,7 @@
             ClientFullName = clientFullName;
             PassportData = passportData;
             Age = age;
-            // HasCriminalRecord откуда-то достаем
+            // HasCriminalRecord достаем из бд (из мока)
             CreditAmount = creditAmount;
             Goal = goal;
             Job = job;
