@@ -16,6 +16,11 @@ namespace CreditApplication
 
             var calculator = new Calculator();
             var total = calculator.CalculatePoints(creditApplication);
+
+            var creditIsApproved = total > 80;
+            var interestRate = creditIsApproved ? calculator.CalculateInterestRate(total) : 0.0;
+            
+            DisplayResult(creditIsApproved, interestRate);
         }
 
         private static void GetProgramHeader()
@@ -23,6 +28,14 @@ namespace CreditApplication
             Console.WriteLine("\n\t<--- Мгновенный кредит --->\n");
             var operatorName = ConfigurationManager.AppSettings["OperatorName"];
             Console.WriteLine($"Оператор: {operatorName}\n");
+        }
+
+        private static void DisplayResult(bool creditIsApproved, double interestRate)
+        {
+            var result = creditIsApproved ? "Кредит одобрен" : "Кредит НЕ одобрен";
+            Console.WriteLine($"\nРезультат: {result}");
+            if (creditIsApproved)
+                Console.WriteLine($"Процентная ставка: {interestRate}%");
         }
 
         private static Models.CreditApplication GetInput()

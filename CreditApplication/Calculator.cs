@@ -102,5 +102,21 @@ namespace CreditApplication
 
             return total;
         }
+
+        public double CalculateInterestRate(int total)
+        {
+            var rate = total switch
+            {
+                < 84 => 30,
+                < 88 => 26,
+                < 92 => 22,
+                < 96 => 19,
+                < 100 => 15,
+                100 => 12.5,
+                _ => 0.0
+            };
+
+            return rate;
+        }
     }
 }
